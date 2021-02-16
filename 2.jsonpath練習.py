@@ -15,9 +15,11 @@ jsonobj = json.loads(html_str)
 citylist = jsonpath.jsonpath(jsonobj, '$..name')
 
 print (jsonobj)
+
 print(citylist)
 
 with open('city_name.txt','w') as f:
     content = json.dumps(citylist, ensure_ascii=False)
     f.write(content)
+    print(content)
 
